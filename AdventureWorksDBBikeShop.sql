@@ -1,6 +1,4 @@
-Use AdventureWorks2022
 
------------------------------------------------------------
 --Project Details
 You’ve just joined Adventure Works Cycles, a company that makes and sells bikes, parts,
 clothing and accessories around the world. On your first morning the Sales Director drops by
@@ -9,7 +7,13 @@ in the company database.
 Your job is to be the Bike Shop Detective. You’ll write 32 SQL queries, each answering a real
 business question, plus a final challenge that brings everything together.
 -----------------------------------------------------------------
----Part A - Warm up
+
+--Selecting the database
+
+Use AdventureWorks2022
+----------------------------------------------------------------
+--- PART A - Product Exploration 
+
 --Q1 What do we sell?
 
 SELECT TOP 10 ProductID,Name, ProductNumber, Color, ListPrice 
@@ -102,7 +106,7 @@ GROUP BY Color
 HAVING COUNT(*) > 30;
 
 ----------------------------------------------------------------------------------
----Part C - Date Functions
+---Part C - Date and Time Analysis
 
 --Q12 For our first few orders, show the year, quarter, month, day and the name of the weekday
 
@@ -206,6 +210,7 @@ DATEDIFF(Day,MIN(OrderDate),MAX(OrderDate)) AS DaysAsCustomer
 FROM Sales.SalesOrderHeader
 GROUP BY CustomerID
 
+--------------------------------------------------------------------------------------------
 ---Part D - Simple Joins
 
 --Q22 Each product with its subcategory. Show our 10 most expensive products with the name of their subcategory.
@@ -251,6 +256,7 @@ INNER JOIN Person.Person  AS  p
 ON p.BusinessEntityID = c.PersonID
 WHERE c.StoreID IS NULL
 ORDER BY p.LastName ASC;
+---------------------------------------------------------------------------------------
 
 ---Part E - Joins + aggregates
 
@@ -303,7 +309,8 @@ GROUP BY t.Name,
          t.[Group]
 HAVING SUM(o.TotalDue)  >  10000000;
 
---- Part F - Bigger Queries
+-----------------------------------------------------------------------------------------
+--- Part F - Advanced Business Analysis
 
 --Q30 How many products do we have in each category, and what is the average list price?
 
