@@ -1,4 +1,4 @@
-# AdventureWorks 2022 – SQL Mini-Project: The Bike Shop
+# AdventureWorks 2022 – SQL: The Bike Shop
 
 ## Project overview
 This portfolio project contains 41 SQL queries based on the *AdventureWorks SQL Mini-Project: The Bike Shop* task sheet. The exercises use business questions about a fictional bicycle business to practise querying relational sales, product, customer and territory data.
