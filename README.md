@@ -535,5 +535,6 @@ Qualified finance professional developing practical skills in data analytics, SQ
 
 This project forms part of my data analytics learning and professional portfolio.
 
-LinkedIn:
+LinkedIn: https://www.linkedin.com/poornisha-ramesh
+
 GitHub: [PRamesh747](https://github.com/PRamesh747)
